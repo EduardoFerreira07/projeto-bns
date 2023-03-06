@@ -10,14 +10,61 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+
+    <!-- Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href={% static 'vendor/bootstrap/css/bootstrap.min.css' %} rel="stylesheet" /> 
+    <link href={% static 'vendor/bootstrap-icons/bootstrap-icons.css' %} rel="stylesheet" /> 
+    <link href={% static 'vendor/swiper/swiper-bundle.min.css' %} rel="stylesheet" />
+    <link href={% static 'vendor/glightbox/css/glightbox.min.css' %} rel="stylesheet" /> 
+    <link href={% static 'vendor/aos/aos.css' %} rel="stylesheet" />
+
+    <!-- Template Main CSS Files -->
+    <link href={% static 'css/variables.css' %} rel="stylesheet" /> <link
+    href={% static 'css/main.css' %} rel="stylesheet" />
+
     <title>BNS Promotora</title>
   </head>
   <body>
-  <header></header>
+    
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <h1>BNS Promotora</h1>
+        </a>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="single-post.html">Sobre</a></li>
+            <li class="dropdown">
+              <a href="category.html">
+                <span>Serviços</span>
+                <i class="bi bi-chevron-down dropdown-indicator ml-2"></i>
+              </a>
+              <ul>
+                <li><a href="#">Drop Down 1</a></li>
+                <li><a href="#">Drop Down 2</a></li>
+                <li><a href="#">Drop Down 3</a></li>
+                <li><a href="#">Drop Down 4</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html">Atendimento</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
     <main>
       {% include 'partials/messages.html' %}
 
-      <form action="{% url 'home' %}" , method="POST">
+      {% comment %} <form action="{% url 'home' %}" , method="POST">
         {% csrf_token %}
         <label>Nome</label>
         <input type="text" placeholder="Nome..." , name="nome" />
@@ -36,7 +83,7 @@
         <br />
         <br />
         <input type="submit" value="Enviar" />
-      </form>
+      </form> {% endcomment %}
     </main>
 
     {% comment %} Bootstrap {% endcomment %}
