@@ -80,10 +80,10 @@ WSGI_APPLICATION = 'bnspromotora.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'bns',
-        'USER' :'bns_db',
-        'PASSWORD' :'0714',
-        'HOST' :'localhost',
+        'NAME': 'bns_db',
+        'USER' :'postgres',
+        'PASSWORD' :'postgres',
+        'HOST' :'db',
         'PORT' : '5432',
     }
 }
