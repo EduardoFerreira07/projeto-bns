@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 from decouple import config
@@ -80,11 +81,11 @@ WSGI_APPLICATION = 'bnspromotora.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'bns',
-        'USER' :'bns_db',
-        'PASSWORD' :'0714',
-        'HOST' :'localhost',
-        'PORT' : '5432',
+        'NAME': config('NAME'),
+        'USER' :config('USER'),
+        'PASSWORD' :config('PASSWORD'),
+        'HOST' :config('HOST'),
+        'PORT' : config('PORT'),
     }
 }
 
@@ -124,14 +125,16 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-#mensagens
+STATIC_URL = '/static/'
 
+#mensagens
 
 
 MESSAGE_TAGS = {
