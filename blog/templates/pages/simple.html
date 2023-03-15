@@ -1,0 +1,96 @@
+{% load static %}
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href={% static 'css/home.css' %}>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <!-- Fontes-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href={% static 'vendor/bootstrap/css/bootstrap.min.css' %} rel="stylesheet" /> 
+    <link href={% static 'vendor/bootstrap-icons/bootstrap-icons.css' %} rel="stylesheet" /> 
+    <link href={% static 'vendor/swiper/swiper-bundle.min.css' %} rel="stylesheet" />
+    <link href={% static 'vendor/glightbox/css/glightbox.min.css' %} rel="stylesheet" /> 
+    <link href={% static 'vendor/aos/aos.css' %} rel="stylesheet" />
+
+    <!-- Template Main CSS Files -->
+    <link href={% static 'css/variables.css' %} rel="stylesheet" /> <link
+    href={% static 'css/main.css' %} rel="stylesheet" />
+
+    <title>BNS Promotora</title>
+  </head>
+  <body>
+    
+    <header id="header" class="header d-flex align-items-center fixed-top">
+      <div
+        class="container-fluid container-xl d-flex align-items-center justify-content-between"
+      >
+        <a href="index.html" class="logo d-flex align-items-center">
+          <h1>BNS Promotora</h1>
+        </a>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="single-post.html">Sobre</a></li>
+            <li class="dropdown">
+              <a href="category.html">
+                <span>Serviços</span>
+                <i class="bi bi-chevron-down dropdown-indicator ml-2"></i>
+              </a>
+              <ul>
+                <li><a href="#">Drop Down 1</a></li>
+                <li><a href="#">Drop Down 2</a></li>
+                <li><a href="#">Drop Down 3</a></li>
+                <li><a href="#">Drop Down 4</a></li>
+              </ul>
+            </li>
+            <li><a href="about.html">Atendimento</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    
+    <main>
+      {% include 'partials/messages.html' %}
+
+      {% comment %} <form action="{% url 'home' %}" , method="POST">
+        {% csrf_token %}
+        <label>Nome</label>
+        <input type="text" placeholder="Nome..." , name="nome" />
+        <br />
+        <br />
+        <label>Telefone</label>
+        <input type="text" placeholder="Telefone..." , name="telefone" />
+        <br />
+        <br />
+        <label>CPF</label>
+        <input type="text" placeholder="CPF..." , name="cpf" />
+        <br />
+        <br />
+        <label>Mensagem</label>
+        <textarea name="mensagem" cols="30" rows="6"></textarea>
+        <br />
+        <br />
+        <input type="submit" value="Enviar" />
+      </form> {% endcomment %}
+    </main>
+
+    {% comment %} Bootstrap {% endcomment %}
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
