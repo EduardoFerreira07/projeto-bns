@@ -411,13 +411,13 @@ section {
   font-size: 24px;
 }
 
-#hero .btn-get-started {
+.btn-get-started {
   font-family: "Jost", sans-serif;
   font-weight: 500;
   font-size: 20px;
   letter-spacing: 1px;
   display: inline-block;
-  padding: 15px 24px;
+  padding: 10px 25px;
   border-radius: 8px;
   transition: 0.5s;
   margin: 10px 0 0 0;
@@ -425,7 +425,7 @@ section {
   background: #3442c7;
 }
 
-#hero .btn-get-started:hover {
+.btn-get-started:hover {
   background: #209dd8;
 }
 
@@ -496,7 +496,7 @@ section {
     width: 80%;
   }
 
-  #hero .btn-get-started {
+  .btn-get-started {
     font-size: 16px;
     padding: 10px 24px 11px 24px;
   }
