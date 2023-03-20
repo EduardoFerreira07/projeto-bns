@@ -1,0 +1,7 @@
+#hero {
+  content: "";
+  display: inline-block;
+  width: 100vw;
+  height: 90vh;
+  background-image: url('blog/static/assets/img/bg-detail.svg');
+}
